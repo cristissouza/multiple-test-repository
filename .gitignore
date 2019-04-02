@@ -1,2 +1,4 @@
 # Dependency directories
-/node_modules
+node_modules/
+backstop_data/engine_scripts/casper/
+backstop_data/engine_scripts/chromy/
