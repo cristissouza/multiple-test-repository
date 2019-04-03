@@ -1,0 +1,22 @@
+{
+  "name": "ui-tests",
+  "version": "1.0.0",
+  "description": "Test on pokedex page",
+  "main": "conf.js",
+  "scripts": {
+    "start:webdriver": "webdriver-manager update && webdriver-manager start",
+    "test:e2e-firefox": "webdriver-manager update --versions.gecko=v0.17.0 && webdriver-manager start && protractor.conf.js --browser firefox",
+    "test": "npm run protractor",
+    "protractor": "./node_modules/.bin/protractor conf.js"
+  },
+  "author": "Cristiane Souza",
+  "license": "MIT",
+  "dependencies": {
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^4.0.5",
+    "geckodriver": "^1.16.1",
+    "protractor": "^5.4.2",
+    "protractor-cucumber-framework": "^6.1.1",
+    "webdriver-manager": "^13.0.0"
+  }
+}

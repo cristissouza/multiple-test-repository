@@ -11,4 +11,5 @@ backstop_data/engine_scripts/puppet/ignoreCSP.js
 backstop_data/engine_scripts/puppet/interceptImages.js
 backstop_data/engine_scripts/puppet/loadCookies.js
 backstop_data/engine_scripts/imageStub.jpg
+e2e/node_modules
 
