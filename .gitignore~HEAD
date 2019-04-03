@@ -1,0 +1,4 @@
+# Dependency directories
+visual-regression-testing/node_modules/
+visual-regression-testing/backstop_data/engine_scripts/casper/
+visual-regression-testing/backstop_data/engine_scripts/chromy/

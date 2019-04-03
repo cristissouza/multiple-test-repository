@@ -1,0 +1,65 @@
+{
+  "id": "pokedex",
+  "viewports": [
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Bulbasaur",
+      "onBeforeScript": "../backstop_data/puppet/onBefore.js",
+      "url": "https://www.pokemon.com/us/pokedex/venusaur",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": ".pokedex-pokemon-profile",
+      "delay": 1,
+      "hideSelectors": ["#cookie-dismisser"],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": ".cookie-dismisser",
+      "postInteractionWait": 1.0,
+      "selectors": [".pokedex-pokemon-profile"],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Venusaur_information",
+      "url": "https://www.pokemon.com/us/pokedex/venusaur",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": ".active",
+      "delay": 1,
+      "hideSelectors": ["#cookie-dismisser"],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": ".cookie-dismisser",
+      "postInteractionWait": 1.0,
+      "selectors": [".pokemon-stats-info.active"],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../backstop_data/bitmaps_test",
+    "engine_scripts": "../backstop_data/engine_scripts",
+    "html_report": "../backstop_data/html_report",
+    "ci_report": "../backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 1,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
