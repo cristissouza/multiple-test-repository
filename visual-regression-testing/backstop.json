@@ -1,32 +1,26 @@
 {
-  "id": "backstop_default",
+  "id": "pokedex",
   "viewports": [
-    {
-      "label": "phone",
-      "width": 320,
-      "height": 480
-    },
     {
       "label": "tablet",
       "width": 1024,
       "height": 768
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Bulbasaur_evolution",
+      "label": "Bulbasaur",
+      "onBeforeScript": "../backstop_data/puppet/onBefore.js",
       "url": "https://www.pokemon.com/us/pokedex/venusaur",
       "referenceUrl": "",
       "readyEvent": "",
-      "readySelector": ".active",
-      "delay": 0.5,
-      "hideSelectors": [],
+      "readySelector": ".pokedex-pokemon-profile",
+      "delay": 1,
+      "hideSelectors": ["#cookie-dismisser"],
       "removeSelectors": [],
       "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
+      "clickSelector": ".cookie-dismisser",
+      "postInteractionWait": 1.0,
       "selectors": [".pokedex-pokemon-profile"],
       "selectorExpansion": true,
       "expect": 0,
@@ -39,31 +33,13 @@
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": ".active",
-      "delay": 0.5,
-      "hideSelectors": [],
+      "delay": 1,
+      "hideSelectors": ["#cookie-dismisser"],
       "removeSelectors": [],
       "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
+      "clickSelector": ".cookie-dismisser",
+      "postInteractionWait": 1.0,
       "selectors": [".pokemon-stats-info.active"],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    },
-    {
-      "label": "Squirtle_base_evolution",
-      "url": "https://www.pokemon.com/us/pokedex/wartortle",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": ".active",
-      "delay": 0.5,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [".evolution-profile.match-height-tablet"],
       "selectorExpansion": true,
       "expect": 0,
       "misMatchThreshold" : 0.1,
@@ -71,18 +47,18 @@
     }
   ],
   "paths": {
-    "bitmaps_reference": "backstop_data/bitmaps_reference",
-    "bitmaps_test": "backstop_data/bitmaps_test",
-    "engine_scripts": "backstop_data/engine_scripts",
-    "html_report": "backstop_data/html_report",
-    "ci_report": "backstop_data/ci_report"
+    "bitmaps_reference": "../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../backstop_data/bitmaps_test",
+    "engine_scripts": "../backstop_data/engine_scripts",
+    "html_report": "../backstop_data/html_report",
+    "ci_report": "../backstop_data/ci_report"
   },
   "report": ["browser"],
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"]
   },
-  "asyncCaptureLimit": 5,
+  "asyncCaptureLimit": 1,
   "asyncCompareLimit": 50,
   "debug": false,
   "debugWindow": false
