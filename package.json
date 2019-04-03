@@ -4,7 +4,7 @@
   "description": "Testing Pokemon API",
   "main": "test.js",
   "scripts": {
-    "test": "mocha -R spec test.js"
+    "test": "mocha -R spec api-test/test.js"
   },
   "repository": {
     "type": "git",
