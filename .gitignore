@@ -1,7 +1,15 @@
 # Dependency directories
-node_modules/
-backstop_data/engine_scripts/casper/
-backstop_data/engine_scripts/chromy/
 visual-regression-testing/node_modules/
 visual-regression-testing/backstop_data/engine_scripts/casper/
 visual-regression-testing/backstop_data/engine_scripts/chromy/
+/node_modules
+backstop_data/engine_scripts/casper/
+backstop_data/engine_scripts/chromy/
+backstop_data/html_report
+backstop_data/bitmaps_test
+backstop_data/engine_scripts/puppet/clickAndHoverHelper.js
+backstop_data/engine_scripts/puppet/ignoreCSP.js
+backstop_data/engine_scripts/puppet/interceptImages.js
+backstop_data/engine_scripts/puppet/loadCookies.js
+backstop_data/engine_scripts/imageStub.jpg
+
