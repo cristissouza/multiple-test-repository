@@ -2,56 +2,89 @@
   "id": "pokedex",
   "viewports": [
     {
-      "label": "tablet",
-      "width": 1024,
-      "height": 768
+      "label": "Desktop",
+      "width": 1600,
+      "height": 800
     }
   ],
   "scenarios": [
     {
-      "label": "Bulbasaur",
-      "onBeforeScript": "../backstop_data/puppet/onBefore.js",
+      "label": "Bulbasaur_profile_img",
+      "onReadyScript": "backstop_data/puppet/onReady.js",
       "url": "https://www.pokemon.com/us/pokedex/venusaur",
-      "referenceUrl": "",
-      "readyEvent": "",
       "readySelector": ".pokedex-pokemon-profile",
-      "delay": 1,
-      "hideSelectors": ["#cookie-dismisser"],
-      "removeSelectors": [],
-      "hoverSelector": "",
+      "delay": 1.5,
+      "removeSelectors": ["#cookie-dismisser.gus-close-button"],
+      "hoverSelector": ".pokedex-pokemon-profile",
       "clickSelector": ".cookie-dismisser",
-      "postInteractionWait": 1.0,
+      "postInteractionWait": 2.0,
       "selectors": [".pokedex-pokemon-profile"],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold" : 2.0,
       "requireSameDimensions": true
     },
     {
-      "label": "Venusaur_information",
+      "label": "Venusaur_profile_information",
       "url": "https://www.pokemon.com/us/pokedex/venusaur",
-      "referenceUrl": "",
-      "readyEvent": "",
       "readySelector": ".active",
-      "delay": 1,
-      "hideSelectors": ["#cookie-dismisser"],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": ".cookie-dismisser",
+      "delay": 1.5,
+      "hideSelectors": ["#cookie-dismisser.gus-close-button"],
+      "clickSelector": "#cookie-dismisser.gus-close-button",
       "postInteractionWait": 1.0,
-      "selectors": [".pokemon-stats-info.active"],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
+      "selectors": [".pokemon-ability-info.color-bg.color-lightblue.match.active"],
+      "misMatchThreshold" : 1.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "explore_button-signup",
+      "url": "https://www.pokemon.com/us/pokedex/",
+      "readySelector": "li.visible-not-signed-in.sign-up",
+      "delay": 1.5,
+      "hideSelectors": ["#cookie-dismisser.gus-close-button"],
+      "postInteractionWait": 2.0,
+      "selectors": ["li.visible-not-signed-in.sign-up"],
+      "misMatchThreshold" : 1.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "explore_button-sigin",
+      "url": "https://www.pokemon.com/us/pokedex/",
+      "readySelector": "li.visible-not-signed-in.sign-in",
+      "delay": 1.5,
+      "hideSelectors": ["#cookie-dismisser.gus-close-button"],
+      "postInteractionWait": 2.0,
+      "selectors": ["li.visible-not-signed-in.sign-in"],
+      "misMatchThreshold" : 1.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "explore_button-avatar",
+      "url": "https://www.pokemon.com/us/pokedex/",
+      "readySelector": "span.icon.icon_create_avatar",
+      "delay": 1.5,
+      "hideSelectors": ["#cookie-dismisser.gus-close-button"],
+      "postInteractionWait": 2.0,
+      "selectors": ["span.icon.icon_create_avatar"],
+      "misMatchThreshold" : 1.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "explore_button-avatar",
+      "url": "https://www.pokemon.com/us/pokedex/",
+      "readySelector": "a#shuffle.button.button-lightblue.no-arrow",
+      "delay": 1.5,
+      "hideSelectors": ["#cookie-dismisser.gus-close-button"],
+      "postInteractionWait": 2.0,
+      "selectors": ["a#shuffle.button.button-lightblue.no-arrow"],
+      "misMatchThreshold" : 1.0,
       "requireSameDimensions": true
     }
   ],
   "paths": {
-    "bitmaps_reference": "../backstop_data/bitmaps_reference",
-    "bitmaps_test": "../backstop_data/bitmaps_test",
-    "engine_scripts": "../backstop_data/engine_scripts",
-    "html_report": "../backstop_data/html_report",
-    "ci_report": "../backstop_data/ci_report"
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
   },
   "report": ["browser"],
   "engine": "puppeteer",
@@ -59,7 +92,7 @@
     "args": ["--no-sandbox"]
   },
   "asyncCaptureLimit": 1,
-  "asyncCompareLimit": 50,
+  "asyncCompareLimit": 5,
   "debug": false,
   "debugWindow": false
 }
