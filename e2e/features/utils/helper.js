@@ -7,6 +7,7 @@ class Helper {
   }
 
   waitForElement(subject, timeout = 5000) {
+    browser.ignoreSynchronization = true;
     return browser.wait(ExpectedConditions.visibilityOf(subject), timeout);
   }
 
@@ -19,7 +20,11 @@ class Helper {
   }
 
   checkURLContains(url) {
-    return browser.wait(ExpectedConditions.urlContains(url), 5000);
+    return browser.wait(ExpectedConditions.urlContains(url), 7000);
+  }
+
+  waitElement(element){
+    return browser.wait(element);
   }
 }
 

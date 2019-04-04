@@ -1,22 +1,22 @@
 [
   {
-    "description": "   As a user I would like to search for ",
+    "description": "   As a user I would like to search for any pokemon and get its information",
     "keyword": "Feature",
-    "name": "Feature name",
-    "line": 3,
-    "id": "feature-name",
+    "name": "seach for the pokemon",
+    "line": 2,
+    "id": "seach-for-the-pokemon",
     "tags": [],
     "uri": "features/searchPokemon.feature",
     "elements": [
       {
-        "id": "feature-name;search-for-a-a-specific-pokemon",
+        "id": "seach-for-the-pokemon;see-randomly-pokemon-options",
         "keyword": "Scenario",
-        "line": 11,
-        "name": "Search for a a specific pokemon",
+        "line": 20,
+        "name": "See randomly pokemon options",
         "tags": [
           {
             "name": "@Test",
-            "line": 10
+            "line": 19
           }
         ],
         "type": "scenario",
@@ -24,7 +24,7 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
+            "line": 7,
             "name": "I am on the pokedex page",
             "match": {
               "location": "features/step_definitions/searchPokemon_step.js:9"
@@ -37,24 +37,89 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
-            "name": "I search for a pokemon using a number \"<003>\"",
+            "line": 21,
+            "name": "I choose to view the pokemon list randomly",
             "match": {
-              "location": "features/step_definitions/searchPokemon_step.js:14"
+              "location": "features/step_definitions/searchPokemon_step.js:28"
             },
             "result": {
-              "status": "failed",
-              "duration": 5315000000,
-              "error_message": "TimeoutError: Wait timed out after 5289ms\n    at /Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:2201:17\n    at ManagedPromise.invokeCallback_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:1376:14)\n    at TaskQueue.execute_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at asyncRun (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:2927:27)\n    at /Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:668:7\n    at process.internalTickCallback (internal/process/next_tick.js:77:7)\nFrom: Task: <anonymous wait>\n    at scheduleWait (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:2188:20)\n    at ControlFlow.wait (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:2517:12)\n    at thenableWebDriverProxy.wait (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/webdriver.js:934:29)\n    at run (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/protractor/built/browser.js:59:33)\n    at ProtractorBrowser.to.(anonymous function) [as wait] (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/protractor/built/browser.js:67:16)\n    at Helper.waitForElement (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/features/utils/helper.js:10:20)\n    at World.<anonymous> (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/features/step_definitions/searchPokemon_step.js:15:13)"
+              "status": "passed",
+              "duration": 5579000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
-            "name": "I see the pokemon searched",
+            "line": 22,
+            "name": "a set of 12 pokemon cards should show up to me",
             "match": {
-              "location": "features/step_definitions/searchPokemon_step.js:24"
+              "location": "features/step_definitions/searchPokemon_step.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 410000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "seach-for-the-pokemon;sort-the-pokemon-list-by-highest-number",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Sort the pokemon list by highest number",
+        "tags": [
+          {
+            "name": "@Test",
+            "line": 24
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the pokedex page",
+            "match": {
+              "location": "features/step_definitions/searchPokemon_step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I choose to view the pokemon list by highest number",
+            "match": {
+              "location": "features/step_definitions/searchPokemon_step.js:41"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1460000000,
+              "error_message": "NoSuchElementError: No element found using locator: By(css selector, #cookie-dismisser.gus-close-button)\n    at elementArrayFinder.getWebElements.then (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/protractor/built/element.js:814:27)\n    at ManagedPromise.invokeCallback_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:1376:14)\n    at TaskQueue.execute_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at asyncRun (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:2927:27)\n    at /Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/selenium-webdriver/lib/promise.js:668:7\n    at process.internalTickCallback (internal/process/next_tick.js:77:7)Error\n    at ElementArrayFinder.applyAction_ (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/protractor/built/element.js:459:27)\n    at ElementArrayFinder.(anonymous function).args [as click] (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/protractor/built/element.js:91:29)\n    at ElementFinder.(anonymous function).args [as click] (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/node_modules/protractor/built/element.js:831:22)\n    at SearchForPokemon.acceptTheCookies (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/features/page_objects/searchPoken.page.js:28:32)\n    at World.<anonymous> (/Users/cristiane.dos.souza/Documents/aplication-test/e2e/features/step_definitions/searchPokemon_step.js:43:23)\n    at process.internalTickCallback (internal/process/next_tick.js:77:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the pokemon list should be present from highest to lowest number",
+            "match": {
+              "location": "features/step_definitions/searchPokemon_step.js:70"
             },
             "result": {
               "status": "skipped"
@@ -64,11 +129,10 @@
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:25"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
