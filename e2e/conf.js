@@ -1,10 +1,12 @@
+// import reporter from 'cucumber-html-reporter';
 const reporter = require('cucumber-html-reporter')
+const env = require('./enviroment');
 
 exports.config = {
+  SELENIUM_PROMISE_MANAGER: true,
   seleniumAddress: 'http://localhost:4444/wd/hub',
   ignoreUncaughtExceptions: true,
-  // baseUrl: 'https://www.pokemon.com/us/pokedex/',
-  directConnect: true,
+  baseUrl: env.baseUrl,
   specs: ['features/*.feature'],
   capabilities: {
     browserName: 'chrome',
