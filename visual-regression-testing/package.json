@@ -1,0 +1,21 @@
+{
+  "name": "visual-regression-testing",
+  "version": "1.0.0",
+  "description": "Visual regression testing to Pokedex page",
+  "main": "index.js",
+  "scripts": {
+    "test": "backstop test",
+    "visual:approve": "backstop approve"
+  },
+  "keywords": [
+    "backstopjs",
+    "visual",
+    "regression",
+    "testing"
+  ],
+  "author": "Cristiane souza",
+  "license": "ISC",
+  "dependencies": {
+    "backstopjs": "^3.8.8"
+  }
+}
