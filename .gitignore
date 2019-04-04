@@ -5,7 +5,7 @@ visual-regression-testing/backstop_data/engine_scripts/casper/
 visual-regression-testing/backstop_data/engine_scripts/chromy/
 visual-regression-testing/backstop_data/engine_scripts/casper/
 backstop_data/engine_scripts/chromy/
-visual-regression-testing/backstop_data/html_report
+# visual-regression-testing/backstop_data/html_report
 visual-regression-testing/backstop_data/bitmaps_test
 visual-regression-testing/backstop_data/engine_scripts/puppet/clickAndHoverHelper.js
 visual-regression-testing/backstop_data/engine_scripts/puppet/ignoreCSP.js
