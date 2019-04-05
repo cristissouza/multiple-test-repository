@@ -21,26 +21,16 @@ When('I search for a pokemon using a number {string}', {timeout: 7000},  async f
 When('I decide to see the pokemon information details', {timeout: 7000}, async function () {
     await helper.waitElement(seachPokedex.sortNameAscCards);
     await helper.waitElement(seachPokedex.elementSearched);
-    await seachPokedex.acceptTheCookies();
     await seachPokedex.viewPokemInformation();
 });
 
 When('I choose to view the pokemon list randomly', {timeout: 7000}, async function () {
    await helper.waitElement(seachPokedex.pokemonImgButton);
-   await seachPokedex.acceptTheCookies();
-    if((helper.waitElement(seachPokedex.cookieButton)) === true){
-      await seachPokedex.acceptTheCookies();
-    }
-    else
-    {
-      await helper.waitForElement(seachPokedex.pokemonNumberInput);
-    }
    await seachPokedex.viewListRamdomly();
 });
 
 When('I choose to view the pokemon list by highest number', {timeout: 7000}, async function () {
    await helper.waitElement(seachPokedex.pokemonImgButton);
-   await seachPokedex.acceptTheCookies();
    await seachPokedex.sortByHighestNumber();
 });
 
@@ -52,15 +42,15 @@ Then('I see the pokemon searched as first element listed', {timeout: 5000}, func
   }).then(callback)
 });
 
-Then('I should see the pokemon page', {timeout: 5000}, function (callback) {
-  helper.checkURLContains('/us/pokedex/venusaur').then((pokemonSpecificPage) => {
+Then('I should see the pokemon page', {timeout: 5000}, async function (callback) {
+  const pokemonSpecificPage = await helper.checkURLContains('/us/pokedex/venusaur');
     expect(pokemonSpecificPage).to.equal(true);
-  }).then(callback);
 });
 
 Then('a set of {int} pokemon cards should show up to me', {timeout: 7000}, async function (int) {
-   await helper.waitForElementNotPresent(seachPokedex.modal);
-   await helper.waitElement(seachPokedex.pokemonImgButton);
+    await helper.waitForElementNotPresent(seachPokedex.modal);
+    await helper.waitElement(seachPokedex.pokemonImgButton);
+    browser.sleep(2000);
    const lengthList=  await seachPokedex.pokemonListLength();
    expect(lengthList).to.equal(int);
 

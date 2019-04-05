@@ -15,6 +15,7 @@ exports.config = {
         '--disable-gpu',
         '--start-maximized',
         '--disable-impl-side-painting',
+        '--incognito',
       ],
     },
   },
@@ -31,7 +32,7 @@ exports.config = {
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   cucumberOpts: {
     require: 'features/step_definitions/*.steps.js',
-    tags: ['@Test'],
+    tags: [],
     format: ['json:results.json'],
     profile: false,
     ignoreUndefinedDefinitions: true,

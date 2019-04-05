@@ -21,7 +21,6 @@ Scenario: See randomly pokemon options
     When I choose to view the pokemon list randomly
     Then a set of 12 pokemon cards should show up to me
 
-@Test
 Scenario: Sort the pokemon list by highest number
     When I choose to view the pokemon list by highest number
     Then the pokemon list should be present from highest to lowest number
