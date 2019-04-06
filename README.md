@@ -10,7 +10,7 @@ QA engineer Aplication test
 
 ##### * e2e
  This folder has its your package.json.
- To run the e2e test you need go to the e2e folder and run **npm run test**
+ To run the e2e test you need to go to the e2e folder and run **npm run test**
 
 ##### * api-test
 To run the API test just run the command  **npm run test** in the root of aplication-test repository
