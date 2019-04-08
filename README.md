@@ -1,7 +1,4 @@
-https://travis-ci.com/cristissouza/multiple-tests-repository.svg?branch=master
-
-# aplication-test
-QA engineer Aplication test
+[![Build Status](https://travis-ci.com/cristissouza/multiple-tests-repository.svg?branch=master)](https://travis-ci.com/cristissouza/multiple-tests-repository)
 
 
 ## Important!!!
